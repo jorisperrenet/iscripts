@@ -6,7 +6,6 @@ Installation scripts for my Ubuntu installation.
 
 ## Installation
 ```bash
-sudo apt install git
 git clone https://github.com/jorisperrenet/iscripts.git && cd iscripts
 sh install.sh
 ```
