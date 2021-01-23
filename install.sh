@@ -118,5 +118,7 @@ sudo -u "$USER" mkdir -p "/home/$USER/.cache/zsh/"
 mkdir -p /home/$USER/Pictures/wallpapers/
 getwallpaper "/home/$USER/Pictures/wallpapers/landscape.jpg"
 
-# Get i3-gaps instead of i3
-sh i3-gaps.sh
+# Run the manual install files
+sh manual_install/i3-gaps.sh
+sh manual_install/termite.sh
+sh manual_install/brave.sh
