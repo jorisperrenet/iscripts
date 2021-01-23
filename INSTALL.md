@@ -14,12 +14,14 @@ git clone https://github.com/jorisperrenet/iscripts.git && cd iscripts
 sh install.sh
 sh manual_install/termite.sh
 ```
-3. Reboot and boot into `i3`.
-4. Install the manual programs in `manual-progs.csv`. It might be useful to open the file in the
+4. Reboot and boot into `i3`.
+5. Don't be surprised when the screen is totally purple. Hit `Mod+Shift+r` (with `Mod` being `Alt`
+   in the setup) to reload the config file and restart `i3` inplace.
+6. Install the manual programs in `manual-progs.csv`. It might be useful to open the file in the
    terminal and use `Control click` to open the URLs in the browser.
-5. Follow the steps in my [dotfiles repo](https://github.com/jorisperrenet/dotfiles) to complete
+7. Follow the steps in my [dotfiles repo](https://github.com/jorisperrenet/dotfiles) to complete
    the installation for certain programs using plugin managers.
-6. Generate ssh-keys to set up on GitHub, GitLab and what not.
+8. Generate ssh-keys to set up on GitHub, GitLab and what not.
 ```bash
 ssh-keygen -t rsa -b 2048 -C "email@example.com"
 ```
