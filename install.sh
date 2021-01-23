@@ -117,3 +117,6 @@ sudo -u "$USER" mkdir -p "/home/$USER/.cache/zsh/"
 # Get the wallpaper so that i3 can set it up.
 mkdir -p /home/$USER/Pictures/wallpapers/
 getwallpaper "/home/$USER/Pictures/wallpapers/landscape.jpg"
+
+# Get i3-gaps instead of i3
+sh i3-gaps.sh
