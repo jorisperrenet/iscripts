@@ -2,8 +2,9 @@
 
 On a fresh installation, take the following steps to end up with my configurations:
 
-1. Install git.
+1. Update apt and install git.
 ```bash
+sudo apt-get update
 sudo apt install git
 ```
 2. Run the executable in this repository
