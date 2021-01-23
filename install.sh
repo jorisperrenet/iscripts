@@ -120,5 +120,6 @@ getwallpaper "/home/$USER/Pictures/wallpapers/landscape.jpg"
 
 # Run the manual install files
 sh manual_install/i3-gaps.sh
-sh manual_install/termite.sh
 sh manual_install/brave.sh
+sh manual_install/nerd_font.sh
+sh manual_install/termite.sh
