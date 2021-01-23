@@ -5,6 +5,7 @@
 Installation scripts for my Ubuntu installation.
 
 ## Installation
+For the installation Ubuntu 20.10+ is needed, since the package polybar requirs that.
 ```bash
 git clone https://github.com/jorisperrenet/iscripts.git && cd iscripts
 sh install.sh

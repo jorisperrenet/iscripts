@@ -89,6 +89,10 @@ setupsymlinks() {
     ln -f -s "/home/$USER/.config/x11/Xresources" "/home/$USER/.Xresources"
 }
 
+getwallpaper() {
+    curl -o $1 https://w.wallhaven.cc/full/8x/wallhaven-8x782y.jpg
+}
+
 ### THE ACTUAL SCRIPT ###
 
 # Build dependencies.
@@ -109,3 +113,7 @@ setupsymlinks
 # Make zsh the default shell for the user.
 sudo chsh -s /bin/zsh "$USER" > /dev/null 2>&1
 sudo -u "$USER" mkdir -p "/home/$USER/.cache/zsh/"
+
+# Get the wallpaper so that i3 can set it up.
+mkdir -p /home/$USER/Pictures/wallpapers/
+getwallpaper "/home/$USER/Pictures/wallpapers/landscape.jpg"
