@@ -8,7 +8,7 @@ Installation scripts for my Ubuntu installation.
 For the installation Ubuntu 20.10+ is needed, since the package polybar requirs that.
 ```bash
 git clone https://github.com/jorisperrenet/iscripts.git && cd iscripts
-sh install.sh
+./install.sh
 ```
 
 For a complete step-by-step process to set up everything, see the `INSTALL.md` file.
@@ -16,6 +16,4 @@ For a complete step-by-step process to set up everything, see the `INSTALL.md` f
 ## Programs
 All programs listed in `progs.csv` are installed automatically through the `install.sh` script.
 
-Programs in `manual-progs.csv` have to be installed manually as I do not want to install packages
-using `snap`. Secondly, some of these programs are proprietary and therefore I don't want to be
-installing them by default (only for things like work).
+Programs in `manual_programs` are installed via a custom script in that directory.

@@ -9,6 +9,7 @@ Optional arguments for custom use:
 
 -h      Display this message.
 -p      Dependencies and programs csv (local file).
+-l      Specify to also install language servers.
 
 EOF
 
@@ -16,10 +17,11 @@ EOF
 exit 1
 }
 
-while getopts ":h" opt; do
+while getopts ":hp:l" opt; do
     case $opt in
         h) printhelp ;;
         p) progsfile=${OPTARG} ;;
+        l) lsp=true ;;
     esac
 done
 
@@ -105,6 +107,7 @@ done
 progsinstallation
 
 # Install the dotfiles in the user's home directory.
+echo "Installing dotfiles..."
 putgitrepo "$dotfilesrepo" "/home/$USER/.config"
 
 # Setup symlinks to use the dotfiles repo.
@@ -118,8 +121,15 @@ sudo -u "$USER" mkdir -p "/home/$USER/.cache/zsh/"
 mkdir -p /home/$USER/Pictures/wallpapers/
 getwallpaper "/home/$USER/Pictures/wallpapers/landscape.jpg"
 
+# If speciefied, then install language servers.
+[ "$lsp" ] && sh language_servers.sh
+
 # Run the manual install files
-sh manual_install/i3-gaps.sh
+echo "Installing brave, the web browser"
 sh manual_install/brave.sh
+echo "Installing neovim, the editor"
+sh manual_install/neovim.sh
+echo "Installing nerdfont, a font"
 sh manual_install/nerd_font.sh
-sh manual_install/termite.sh
+echo "Installing alacritty, a terminal"
+sh manual_install/alacritty.sh
