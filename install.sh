@@ -122,11 +122,10 @@ mkdir -p /home/$USER/Pictures/wallpapers/
 getwallpaper "/home/$USER/Pictures/wallpapers/landscape.jpg"
 
 # If speciefied, then install language servers.
-[ "$lsp" ] && sh language_servers.sh
+echo "Install Language servers"
+[ "$lsp" ] && sh language_servers.sh >/dev/null 2>&1
 
 # Run the manual install files
-echo "Installing brave, the web browser"
-./manual_install/brave.sh >/dev/null 2>&1
 echo "Installing neovim, the editor"
 ./manual_install/neovim.sh >/dev/null 2>&1
 echo "Installing nerdfont, a font"

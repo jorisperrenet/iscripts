@@ -7,7 +7,7 @@ sudo apt install cmake pkg-config libfreetype6-dev
 
 dir="/home/$USER/.local/src"; mkdir -p "$dir"
 git clone "https://github.com/alacritty/alacritty.git" "$dir/alacritty"
-cd alacritty
+cd "$dir/alacritty"
 
 # install
 cargo build --release
