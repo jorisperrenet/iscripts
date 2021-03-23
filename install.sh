@@ -126,10 +126,10 @@ getwallpaper "/home/$USER/Pictures/wallpapers/landscape.jpg"
 
 # Run the manual install files
 echo "Installing brave, the web browser"
-sh manual_install/brave.sh
+./manual_install/brave.sh >/dev/null 2>&1
 echo "Installing neovim, the editor"
-sh manual_install/neovim.sh
+./manual_install/neovim.sh >/dev/null 2>&1
 echo "Installing nerdfont, a font"
-sh manual_install/nerd_font.sh
+./manual_install/nerd_font.sh >/dev/null 2>&1
 echo "Installing alacritty, a terminal"
-sh manual_install/alacritty.sh
+./manual_install/alacritty.sh >/dev/null 2>&1
