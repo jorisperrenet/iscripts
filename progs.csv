@@ -1,4 +1,5 @@
 #TAG,NAME IN REPO (or git url),PURPOSE,url|dir|zip
+,adobe-source-code-pro-fonts,"terminal fonts",
 ,alacritty,"is a fast and costumizable terminal",
 ,dialog,"for displaying messages in terminal",
 ,dmenu,"is a minimal program launcher",
