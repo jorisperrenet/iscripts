@@ -145,7 +145,8 @@ dfg checkout -f
 # Initialize the submodules, which has to be done like this in order for
 # the bare repository to be able to manage them.
 chown -R "$name":wheel "/home/$name"  # there was some error with the permissions
-dfg -C "/home/$name" submodule update --init --recursive
+dfg -C "/home/$name" submodule update --init --force
+dfg -C "/home/$name" submodule update --remote --merge --recursive
 # Delete files, but make git ignore the deletion. The files can simply
 # be restored with e.g. `dfg checkout README.md`.
 rm -f "/home/$name/README.md" "/home/$name/LICENSE"
